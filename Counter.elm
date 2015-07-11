@@ -34,7 +34,8 @@ type Action = AddCounter | RemoveCounter Int | ModifyCounter Int Int
 update action array =
   case action of
 
-    AddCounter -> Array.push 0 array
+    AddCounter ->
+      Array.push 0 array
 
     RemoveCounter index ->
       let length = Array.length array in
@@ -44,5 +45,3 @@ update action array =
       case Array.get index array of
         Nothing -> array
         Just item -> Array.set index (item + delta) array
-
-    _ -> array
