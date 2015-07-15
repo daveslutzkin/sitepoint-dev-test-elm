@@ -1,11 +1,8 @@
+module Counter where
+
 import Array
 import Html exposing (button, div, span, text)
 import Html.Events exposing (onClick)
-import StartApp
-
-
-main =
-  StartApp.start { model = model, view = view, update = update }
 
 
 model = Array.fromList [4,5,6]
